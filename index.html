@@ -1,0 +1,32 @@
+---
+layout: default
+title: 乔布立斯Blog
+pagination: true
+---
+
+
+<h1>日志</h1>
+
+<div class="custom-posts">
+  {% for post in paginator.posts %}
+  <div class="post-item">
+    <h2><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h2>
+    <p class="post-meta">
+      Posted by  <span style="color: #030353;">{{ site.github.owner_name }}</span> on {{ post.date | date: "%B %d, %Y" }}
+    </p>
+    <p class="post-excerpt">
+      {{ post.excerpt | strip_html | truncate: 200 }}
+    </p>
+  </div>
+  {% endfor %}
+</div>
+
+<!-- 分页导航 -->
+<div class="pagination">
+  {% if paginator.previous_page %}
+    <a href="{{ paginator.previous_page_path | relative_url }}">&larr; Previous</a>
+  {% endif %}
+  {% if paginator.next_page %}
+    <a href="{{ paginator.next_page_path | relative_url }}">Next &rarr;</a>
+  {% endif %}
+</div>

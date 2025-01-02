@@ -1,0 +1,26 @@
+# 忽略 Jekyll 构建输出
+_site/
+
+# 忽略 Jekyll 缓存
+.sass-cache/
+.jekyll-cache/
+.jekyll-metadata
+
+# 忽略日志文件和临时文件
+*.log
+*.tmp
+*.bak
+*.swp
+
+# 忽略依赖管理文件夹（本地环境）
+.bundle/
+vendor/
+
+# 忽略 Node.js 文件夹（如果使用 npm 或 yarn）
+node_modules/
+
+# 忽略 Gemfile.lock（如果你希望使用最新的 gem 版本）
+Gemfile.lock
+
+# 忽略配置文件备份
+_config.yml~

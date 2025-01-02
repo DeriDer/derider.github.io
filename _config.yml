@@ -1,1 +1,11 @@
 theme: jekyll-theme-cayman
+home_title: "乔布立斯Blog"
+paginate: 5 
+paginate_path: "/archive/page:num/"
+plugins:
+  - jekyll-paginate
+  - jekyll-json
+excerpt_separator: <!--more-->
+include:
+  - search.json
+baseurl: ""
