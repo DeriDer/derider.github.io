@@ -5,7 +5,18 @@ paginate_path: "/archive/page:num/"
 plugins:
   - jekyll-paginate
   - jekyll-json
+  - jekyll-archives
 excerpt_separator: <!--more-->
 include:
   - search.json
 baseurl: ""
+
+jekyll-archives:
+  enabled:
+    - tags
+  layouts:
+    tag: 'tagpage'   # 自定义布局名称
+  permalinks:
+    tag: '/tags/:name/'
+markdown: kramdown
+highlighter: rouge   # 或 pygments

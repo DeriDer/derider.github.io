@@ -18,3 +18,76 @@
     color: #888;
   }
   
+  .sidebar-section ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .sidebar-section ul li {
+    display: inline-block;
+    margin: 5px 5px 0 0;
+    padding: 5px 10px;
+    background-color: #f2f2f2;
+    border-radius: 15px;
+  }
+
+  ul.recent-updated {
+    list-style-type: none; /* 去掉默认的圆点 */
+    padding: 0;
+    margin: 0;
+  }
+  
+  ul.recent-updated li {
+    display: block;
+    margin-bottom: 8px;
+  }
+
+  .tag-item {
+    display: inline-block;      /* 让它像按钮那样，撑开宽度 */
+    padding: 6px 10px;          /* 内边距 */
+    margin: 4px;                /* 间距 */
+    border: 1px solid #ccc;     /* 边框 */
+    border-radius: 15px;        /* 圆角半径 */
+    text-decoration: none;      /* 去除默认下划线 */
+    color: #333;                /* 文字颜色 */
+    background-color: #fafafa;
+  }
+  
+  .tag-item:hover {
+    text-decoration: none;
+    border-color: #999;         /* 悬停时的边框颜色 */
+    background-color: #0d6efd;  /* 悬停时背景色 */
+  }
+
+  article {
+    max-width: 800px;
+    line-height: 1.8;
+    text-align: left; /* 右对齐 */
+  }
+
+  /* 1) 外层容器统一深色 & 圆角 */
+  div.highlight {
+    background-color: #2d2d2d;
+    border-radius: 6px;
+    padding: 0.1em;
+    overflow: hidden; /* 避免滚动条超出圆角 */
+    position: relative; /* 有时需要 position 设置，以防伪元素显示异常 */
+  }
+
+  pre code,
+  pre.highlight {
+    background-color: #2d2d2d; /* 或者更深/更浅，根据需要调整 */
+    color: #cfcfcf;            /* 字体颜色 */
+    display: block;
+    padding: 0.2em;
+    border-radius: 4px;
+    border-radius: 6px; /* 圆角 */
+    overflow: auto;
+  }
+
+  /* 或者针对 <pre class="language-bash"> if that's your case */  
+  pre.language-bash code {
+    background-color: #1e1e1e;
+    color: #cfcfcf;
+  }

@@ -5,7 +5,7 @@ permalink: /archive/
 pagination: true
 ---
 
-# Archive
+## Archive
 
 Welcome to the archive! Here you'll find a list of all my posts organized by year.
 

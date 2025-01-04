@@ -1,0 +1,29 @@
+
+<!-- 最近更新 4 篇文章 -->
+<div class="sidebar-section">
+    <h3>Recently Updated</h3>
+    <ul class="recent-updated">
+    {% assign sorted_posts = site.posts | sort: 'date' | reverse %}
+    {% for post in sorted_posts limit:4 %}
+        <li>
+        <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
+        </li>
+    {% endfor %}
+    </ul>
+  
+
+
+<!-- _includes/sidebar.html -->
+<div class="sidebar-section">
+    <h3>Trending Tags</h3>
+    <ul>
+      {% for tagitem in site.tags %}
+        {% assign tagname = tagitem[0] %}
+        <li>
+          <a href="/tags/{{ tagname | replace:' ','-' | downcase }}" class="tag-item">
+            {{ tagname }}
+          </a>
+        </li>
+      {% endfor %}
+    </ul>
+  </div>
