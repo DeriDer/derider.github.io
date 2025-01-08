@@ -3,7 +3,7 @@ name: Build and Deploy Jekyll Site
 on:
   push:
     branches:
-      - main  # 当 `main` 分支有更新时触发
+      - master  # 当 `main` 分支有更新时触发
 
 jobs:
   build-and-deploy:
