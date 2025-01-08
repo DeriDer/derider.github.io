@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Archive | derider.github.io</title>
+<meta name="generator" content="Jekyll v3.10.0" />
+<meta property="og:title" content="Archive" />
+<meta property="og:locale" content="en_US" />
+<link rel="canonical" href="http://localhost:4000/archive/" />
+<meta property="og:url" content="http://localhost:4000/archive/" />
+<meta property="og:site_name" content="derider.github.io" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Archive" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebPage","headline":"Archive","url":"http://localhost:4000/archive/"}</script>
+<!-- End Jekyll SEO tag -->
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="preload" href="https://fonts.googleapis.com/css?family=Open+Sans:400,700&display=swap" as="style" type="text/css" crossorigin>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#157878">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <link rel="stylesheet" href="/assets/css/style.css?v=9000777dd4f57a1530cfc1772b9a20cad84a2bd2">
+    <link rel="stylesheet" href="/assets/css/custom.css?v=9000777dd4f57a1530cfc1772b9a20cad84a2bd2">
+    <script src="https://cdn.jsdelivr.net/gh/christian-fei/Simple-Jekyll-Search@1.9.0/dest/simple-jekyll-search.min.js"></script>
+    <!-- start custom head snippets, customize with your own _includes/head-custom.html file -->
+
+<!-- Setup Google Analytics -->
+
+
+
+<!-- You can set your favicon here -->
+<!-- link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" -->
+
+<!-- end custom head snippets -->
+
+
+    <style>
+        nav a {
+                text-decoration: none;
+                color: #007bff;
+                position: relative; /* 必须有 position 才能使用 ::after */
+                transition: color 0.3s ease, transform 0.2s;
+        }
+
+        nav a::after {
+                content: ""; /* 创建一个空内容 */
+                position: absolute;
+                left: 0;
+                bottom: -2px; /* 下划线距离文字的间距 */
+                width: 0;
+                height: 2px; /* 下划线的厚度 */
+                background-color: rgba(0, 0, 0, 0.3); /* 设置淡淡的黑色 */
+                transition: width 0.3s ease;
+        }
+
+        nav a:hover {
+                color: #0056b3;
+                transform: scale(1.3);
+        }
+
+        nav a:hover::after {
+                width: 100%; /* 悬停时下划线展开到文字宽度 */
+        }
+      </style>
+
+  </head>
+  <body>
+    <a id="skip-to-content" href="#content">Skip to the content.</a>
+
+    <header class="page-header" role="banner" style="display: flex; align-items: center; justify-content: space-between; padding: 10px 20px; background-color: #f8f9fa;">
+      <h1 class="project-name">乔布立斯Blog</h1>
+      <nav style="display: flex; gap: 15px; margin-left: auto;">
+        <a href="/" style="margin-right: 15px; text-decoration: none; color: #ffffff;">Home</a>
+        <a href="/about/" style="margin-right: 15px; text-decoration: none; color: #ffffff;">About</a>
+        <a href="/archive/" style="text-decoration: none; color: #ffffff;">Archive</a>
+        <div style="position: relative; width: 200px;">
+            <input 
+            type="text" 
+            id="search-input" 
+            placeholder="Search..." 
+            style="margin-left: auto; padding: 5px 10px; border-radius: 4px; border: 1px solid #ccc; width: 200px; color: #000000;"
+            >
+            <ul 
+            id="results-container" 
+            style="
+            position: absolute; 
+            top: 100%; 
+            left: 0; 
+            right: 0; 
+            background: white; 
+            border: 1px solid #ccc; 
+            border-radius: 4px; 
+            margin: 0; 
+            padding: 0; 
+            list-style: none; 
+            max-height: 200px; 
+            overflow-y: auto; 
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
+            display: none;
+            ">
+            </ul>
+        </div>
+      </nav>
+
+
+      <h2 class="project-tagline"></h2>
+      <!--
+        <a href="https://github.com/DeriDer/derider.github.io" class="btn">View on GitHub</a>
+       -->
+      
+    </header>
+
+    <script src="https://cdn.jsdelivr.net/gh/christian-fei/Simple-Jekyll-Search@1.9.0/dest/simple-jekyll-search.min.js"></script>
+    <script>
+    const searchInput = document.getElementById('search-input');
+    const resultsContainer = document.getElementById('results-container');
+    let activeIndex = -1;
+
+    // Initialize Simple-Jekyll-Search
+    SimpleJekyllSearch({
+        searchInput: searchInput,
+        resultsContainer: resultsContainer,
+        json: '/search.json',
+        noResultsText: '<li style="padding: 10px; color: #888;">No results found</li>',
+        limit: 5,
+        searchResultTemplate: '<li style="padding: 10px; cursor: pointer;"><a href="{url}" style="text-decoration: none; color: #333;">{title}</a></li>'
+    });
+
+    fetch('/search.json')
+    .then(response => {
+        console.log('Response Status:', response.status);
+        return response.json();
+    })
+    .then(data => {
+        console.log('JSON Data:', data);
+    })
+    .catch(error => {
+        console.error('Error loading search.json:', error);
+    });
+
+    // Show/hide results container
+    searchInput.addEventListener('input', () => {
+        if (searchInput.value.trim() !== '') {
+        resultsContainer.style.display = 'block';
+        } else {
+        resultsContainer.style.display = 'none';
+        }
+    });
+
+    searchInput.addEventListener('blur', () => {
+        setTimeout(() => {
+        resultsContainer.style.display = 'none'; // Hide results when search input loses focus
+        }, 200);
+    });
+
+    // Keyboard navigation
+    searchInput.addEventListener('keydown', (e) => {
+        const results = resultsContainer.querySelectorAll('li');
+        if (e.key === 'ArrowDown') {
+        // Move selection down
+        activeIndex = (activeIndex + 1) % results.length;
+        updateActiveResult(results);
+        } else if (e.key === 'ArrowUp') {
+        // Move selection up
+        activeIndex = (activeIndex - 1 + results.length) % results.length;
+        updateActiveResult(results);
+        } else if (e.key === 'Enter') {
+        // Select the active result
+        if (activeIndex >= 0 && results[activeIndex]) {
+            const link = results[activeIndex].querySelector('a');
+            if (link) {
+            window.location.href = link.href;
+            }
+        }
+        }
+    });
+
+    // Update active result
+    function updateActiveResult(results) {
+        results.forEach((result, index) => {
+        if (index === activeIndex) {
+            result.style.backgroundColor = '#e0e0e0';
+        } else {
+            result.style.backgroundColor = '';
+        }
+        });
+    }
+    </script>
+    <div class="container" style="display: flex; align-items: flex-start;">
+    <main id="content" class="main-content" role="main">
+      <h2 id="archive">Archive</h2>
+
+<p>Welcome to the archive! Here you’ll find a list of all my posts organized by year.</p>
+
+<h2 id="posts-by-year">Posts by Year</h2>
+
+<ul>
+  
+  
+    
+    
+      
+      <h2>2025</h2>
+    
+    <li>
+      <a href="/2025/01/06/mnq%E5%A4%8D%E7%9B%98.html">20250106MNQ复盘</a>
+      <span>(January 06, 2025)</span>
+    </li>
+  
+    
+    
+    <li>
+      <a href="/2025/01/03/mnq%E5%A4%8D%E7%9B%98.html">20250103MNQ复盘</a>
+      <span>(January 03, 2025)</span>
+    </li>
+  
+    
+    
+    <li>
+      <a href="/2025/01/03/%E6%9E%84%E5%BB%BAblog.html">第一次前端尝试, run起来</a>
+      <span>(January 03, 2025)</span>
+    </li>
+  
+    
+    
+    <li>
+      <a href="/2025/01/02/mnq%E5%A4%8D%E7%9B%98.html">20250102MNQ复盘</a>
+      <span>(January 02, 2025)</span>
+    </li>
+  
+</ul>
+
+<!-- Pagination Links -->
+<div class="pagination">
+  
+  
+</div>
+
+
+      <footer class="site-footer">
+        
+          <span class="site-footer-owner"><a href="https://github.com/DeriDer/derider.github.io">derider.github.io</a> is maintained by <a href="https://github.com/DeriDer">DeriDer</a>.</span>
+        
+        <span class="site-footer-credits">This page was generated by <a href="https://pages.github.com">GitHub Pages</a>.</span>
+      </footer>
+    </main>
+
+    <aside style = "width: 400px; padding: 20px;">
+      
+<!-- 最近更新 4 篇文章 -->
+<div class="sidebar-section">
+    <h3>Recently Updated</h3>
+    <ul class="recent-updated">
+    
+    
+        <li>
+        <a href="/2025/01/06/mnq%E5%A4%8D%E7%9B%98.html">20250106MNQ复盘</a>
+        </li>
+    
+        <li>
+        <a href="/2025/01/03/%E6%9E%84%E5%BB%BAblog.html">第一次前端尝试, run起来</a>
+        </li>
+    
+        <li>
+        <a href="/2025/01/03/mnq%E5%A4%8D%E7%9B%98.html">20250103MNQ复盘</a>
+        </li>
+    
+        <li>
+        <a href="/2025/01/02/mnq%E5%A4%8D%E7%9B%98.html">20250102MNQ复盘</a>
+        </li>
+    
+    </ul>
+  
+
+
+<!-- _includes/sidebar.html -->
+<div class="sidebar-section">
+    <h3>Trending Tags</h3>
+    <ul>
+      
+        
+        <li>
+          <a href="/tags/mnq" class="tag-item">
+            mnq
+          </a>
+        </li>
+      
+        
+        <li>
+          <a href="/tags/期货" class="tag-item">
+            期货
+          </a>
+        </li>
+      
+        
+        <li>
+          <a href="/tags/jekyll" class="tag-item">
+            Jekyll
+          </a>
+        </li>
+      
+    </ul>
+  </div>
+    </aside>
+  </div>
+  </body>
+</html>
